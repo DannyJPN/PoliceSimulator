@@ -143,7 +143,7 @@ Pravidla:
 - hrac muze prestupky mazat a rucne pridavat
 - seznam je `jen textove vyhledavatelny`
 - kazdy prestupek ma vlastni posuvnik
-- posuvnik primo reprezentuje `zakonne minimum a maximum`
+- posuvnik ukazuje `zakonne minimum a maximum` jako `doporuceni`; hrac je muze prekrocit (nevynucuje se)
 - castku lze menit:
   posuvnikem nebo rucnim ciselnym vstupem
 - oba vstupy jsou vzajemne synchronizovane
@@ -152,6 +152,19 @@ Skupinove pouziti:
 
 - vytvori se `spolecny navrh`
 - individualni odchylka vyjme osobu ze skupiny
+
+## Cela a propousteni
+
+- pri zavirani do cely hrac `urci delku pobytu` (v hernim case)
+- UI ukaze `doporucene rozmezi` dle pravniho systemu; nevynucuje ho
+- kdyz zadrzenemu vyprsi cas, UI da hraci `signal`
+- propusteni provadi hrac sam
+
+## Policejni ukony v UI
+
+- ukony se nabizeji v kontextovem menu / rychle liste, ale `nejdou do fronty`
+- pri volbe ukonu se postava na kratkou vzdalenost dorovna sama
+- jakykoliv pohyb hrace behem dorovnani ukon zrusi
 
 ## Save Load UX
 

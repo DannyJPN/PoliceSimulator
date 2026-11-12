@@ -82,6 +82,22 @@ MVP neni cele mesto ani cela hra. Je to prvni hratelny slice, ktery musi dodat p
 - `stáhnout na břicho`
 - `zvednout do stoje`
 
+Pozn.: policejni ukony nejdou do fronty, jsou primym ovladanim hrace.
+
+### Donucovaci prostredky
+
+- `taser`
+- `sprej`
+- `obušek`
+- `výstřel do vzduchu` (i za jizdy)
+- `hrozba zbraní`
+
+### Rizeni
+
+- hrac ridi sluzebni auto
+- pronasledovani prchajiciho vozu
+- zablokovani jizdy vjetim pred vuz
+
 ### Cela
 
 - `vstupte do cely`
@@ -98,8 +114,9 @@ MVP neni cele mesto ani cela hra. Je to prvni hratelny slice, ktery musi dodat p
 
 - spoluprace
 - kapitulace
-- utek
+- utek (pesky i autem)
 - odpor
+- dobrovolne vydani se (nahodne / pod tlakem)
 
 ## Nutne vyreseni pripadu
 

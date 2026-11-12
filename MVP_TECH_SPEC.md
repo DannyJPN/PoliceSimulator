@@ -34,6 +34,9 @@ Dodat vertical slice:
 - civilni auto
 - nastup a vystup
 - sedadla a occupant state
+- rizeni sluzebniho auta hracem (vcetne prevozu na stanici)
+- AI prchajiciho ridice a automobilove pronasledovani
+- kolize / zablokovani jizdy vjetim pred vuz
 
 ### 3. Person Runtime
 
@@ -61,6 +64,8 @@ Dodat vertical slice:
 - takedown
 - lift
 - search
+- taser / sprej / obusek (docasne omezeni pohybu + animace bolesti, bez zraneni)
+- varovny vystrel do vzduchu a hrozba zbrani (i za jizdy)
 
 ### 6. Case Runtime
 
@@ -74,6 +79,7 @@ Dodat vertical slice:
 - processing room
 - cells
 - occupancy and lock state
+- detention timer v hernim case a signal k propusteni
 
 ### 8. UI Runtime
 
@@ -112,9 +118,15 @@ Kazdy command prochazi:
 
 Preset:
 
-- je jen `sekvence commandu`
-- muze obsahovat i policejni ukony
+- je jen `sekvence povelu`
+- `neobsahuje` policejni ukony
 - kroky jsou vyhodnocovany postupne
+
+Policejni ukony:
+
+- nejdou pres command queue
+- jsou primym ovladanim hracovy postavy
+- kratke automaticke dorovnani pozice; pohyb hrace ho zrusi
 
 ## Save scope
 

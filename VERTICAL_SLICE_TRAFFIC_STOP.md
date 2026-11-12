@@ -72,6 +72,10 @@ Ridic:
 - po zastaveni neuposlechne
 - rozjede se nebo utece po vystupu
 - hrac ho musi znovu dostat pod kontrolu
+- pri ujeti autem: hrac ho pronasleduje ve sluzebnim aute
+  varovny vystrel do vzduchu -> sance, ze zastavi a kapituluje
+  jinak hrac zablokuje jizdu vjetim pred vuz
+- pachatel nemuze definitivne utect
 
 ### C. Aktivni odpor
 
@@ -80,6 +84,8 @@ Ridic:
 - nechce poslechnout
 - hrac musi pouzit:
   fyzicke strzeni, taser, sprej, obusek nebo hrozbu
+- strelna zbran jen k hrozbe / varovnemu vystrelu do vzduchu
+- zadne zraneni; taser = docasne omezeni pohybu + animace bolesti
 
 ### D. Zadrzeni bez odporu, ale s cekanim
 

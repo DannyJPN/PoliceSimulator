@@ -116,7 +116,18 @@ Obsah:
 - prvni implementacni tasky
 - acceptance body pro prvni faze
 
-### 9. Unity scaffold
+### 9. Otevrene otazky
+
+Soubor:
+[OPEN_QUESTIONS.md](C:\Users\Krupa\Desktop\Private\policesim\OPEN_QUESTIONS.md)
+
+Obsah:
+
+- nezodpovezene otazky k uzivatelske specifikaci
+- drobne otevrene body
+- nesrovnalosti mezi dokumenty
+
+### 10. Unity scaffold
 
 Slozka:
 [UnityProjectSkeleton](C:\Users\Krupa\Desktop\Private\policesim\UnityProjectSkeleton)

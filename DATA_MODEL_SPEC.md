@@ -215,10 +215,13 @@ Obsah:
   idle, comply, hesitate, lie, flee, resist, attack, surrender
 - `isBegging`
 - `voluntarySurrenderMode`
+- `isIncapacitated` (docasne omezeni pohybu po taseru / spreji / obusku; zadne zraneni ani healthbar)
 
 Dulezity detail:
 
 - pachatel muze `sam vyhledat policistu` nebo `prijit na stanici`
+  (nahodne nebo pod tlakem)
+- `lie` je rezervovano pro dalsi verzi (dialogovy system), v MVP se nepouziva
 
 ## 12. CommandQueueState
 
@@ -232,9 +235,13 @@ Pravidla:
 
 - kazda osoba ma vlastni frontu
 - skupinovy prikaz se do front `rozkopiruje`
+- fronta obsahuje `jen verbalni povely`, nikdy policejni ukony
+- povely se plni `postupne`
 - prave bezici krok lze smazat
 - pokud uz bezi animace, dokonci se
-- presety a prikazy se rusi novym neslucitelnym povelem
+- slucitelny novy povel se zaradi `na konec` fronty
+- neslucitelny novy povel `smaze celou frontu` (vcetne presetu); bezici animace dobehne a pak se hned provede novy povel
+- neslucitelne = fyzicky neproveditelne soucasne s aktualnim stavem / krokem
 - preset lze prerusit novym povelem `mezi kroky`
 
 ## 13. CommandDefinition
@@ -247,8 +254,11 @@ Staticka definice:
 - `category`
 - `defaultTargetType`
 - `requiresLineOfSight`
+  vzajemna viditelnost hrac <-> NPC (i pres okno, mrize, do jine mistnosti)
 - `requiresAudibility`
+  vychozi doslech cca 10 m
 - `requiresOfficerPositioning`
+  plati jen pro policejni ukony (prime ovladani hrace), ne pro povely ve fronte
 - `compatibilityRules`
 - `preconditionRules`
 
@@ -283,8 +293,8 @@ Obsah:
 
 Pravidla:
 
-- preset je `sekvence akci policisty`
-- muze obsahovat i policejni ukony
+- preset je `sekvence povelu`
+- `neobsahuje` policejni ukony (ty jsou primym ovladanim hrace)
 - muze obsahovat typ cile:
   zed, auto, mrize, mistnost, vozidlo
 - tovární presety se drzi bokem
@@ -300,10 +310,16 @@ Obsah:
 - `insideProcessingRoom`
 - `insideCashDeskArea`
 - `waitingOnStation`
+- `detentionStartedAt` (herni cas)
+- `detentionDuration` (urcena hracem)
+- `recommendedDurationMin` / `recommendedDurationMax` (doporuceni dle pravniho systemu, nevynucuje se)
+- `releaseDue` (cas vyprsel -> UI signal hraci)
 
 Pravidla:
 
 - cela je `1 osoba = 1 cela`
+- propustit muze jen hrac; propusteni je reverzni proces uvezneni
+- po propusteni plati `ControlState.isReleased`
 - cela muze byt otevrena i zavrena
 - i v cele lze davat povely
 
